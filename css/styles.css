@@ -249,19 +249,14 @@ img {
   height: 100vh;
   background-color:var(--backdrop-bg-color);
   opacity: 1;
-  /* visibility: visible; */
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  /* Властивість visibility я тут прибрала, тому що, наскільки я зрозуміла, в даному випадку опасіті дублює її функції, а коли я додаю 
-  і опасіті, і візібіліті, у мене чомусь "ламається" перехід модалки... */
-  
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* visibility: hidden; */
-
+  visibility: hidden;
 }
 
 .modal {
